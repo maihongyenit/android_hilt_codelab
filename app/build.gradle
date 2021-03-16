@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'dagger.hilt.android.plugin'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
 
 android {
     compileSdkVersion 29
@@ -66,5 +67,5 @@ dependencies {
 
     // Hilt dependencies
     implementation "com.google.dagger:hilt-android:$hilt_version"
-    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
 }
